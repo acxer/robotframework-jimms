@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.2 (Python 3.5.2 on linux)" generated="20171202 19:48:41.571">
+<suite id="s1" source="/home/acxer/Documents/robot-testing/test.robot" name="Test">
+<test id="s1-t1" name="User can search for GPU and add it to basket">
+<kw name="Given page can be opened">
+<kw library="SeleniumLibrary" name="Open Browser">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${PAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20171202 19:48:41.637" level="INFO">Opening browser 'ff' to base url 'http://www.jimms.fi'.</msg>
+<status endtime="20171202 19:48:46.186" status="PASS" starttime="20171202 19:48:41.636"></status>
+</kw>
+<status endtime="20171202 19:48:46.186" status="PASS" starttime="20171202 19:48:41.636"></status>
+</kw>
+<kw name="Then user can search for GPU">
+<kw library="SeleniumLibrary" name="Input Text">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:q</arg>
+<arg>GTX 1080Ti</arg>
+</arguments>
+<msg timestamp="20171202 19:48:46.188" level="INFO">Typing text 'GTX 1080Ti' into text field 'name:q'.</msg>
+<status endtime="20171202 19:48:46.252" status="PASS" starttime="20171202 19:48:46.187"></status>
+</kw>
+<kw library="SeleniumLibrary" name="Press Key">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>name:q</arg>
+<arg>\\13</arg>
+</arguments>
+<status endtime="20171202 19:48:46.277" status="PASS" starttime="20171202 19:48:46.252"></status>
+</kw>
+<status endtime="20171202 19:48:46.277" status="PASS" starttime="20171202 19:48:46.187"></status>
+</kw>
+<kw name="When user adds GPU to basket">
+<kw library="SeleniumLibrary" name="Wait Until Element Is Visible">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//a[contains(text(),'LISÄÄ KORIIN')]</arg>
+</arguments>
+<status endtime="20171202 19:48:46.829" status="PASS" starttime="20171202 19:48:46.278"></status>
+</kw>
+<kw library="SeleniumLibrary" name="Click Element">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[contains(text(),'LISÄÄ KORIIN')]</arg>
+</arguments>
+<msg timestamp="20171202 19:48:46.829" level="INFO">Clicking element 'xpath=//a[contains(text(),'LISÄÄ KORIIN')]'.</msg>
+<status endtime="20171202 19:48:47.065" status="PASS" starttime="20171202 19:48:46.829"></status>
+</kw>
+<status endtime="20171202 19:48:47.066" status="PASS" starttime="20171202 19:48:46.278"></status>
+</kw>
+<kw name="Then item is visible in basket">
+<kw library="SeleniumLibrary" name="Wait Until Element Is Visible">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="scrollable"]</arg>
+</arguments>
+<status endtime="20171202 19:48:47.079" status="PASS" starttime="20171202 19:48:47.068"></status>
+</kw>
+<kw library="SeleniumLibrary" name="Close Browser">
+<doc>Closes the current browser.</doc>
+<status endtime="20171202 19:48:47.214" status="PASS" starttime="20171202 19:48:47.080"></status>
+</kw>
+<status endtime="20171202 19:48:47.214" status="PASS" starttime="20171202 19:48:47.066"></status>
+</kw>
+<status endtime="20171202 19:48:47.214" critical="yes" status="PASS" starttime="20171202 19:48:41.636"></status>
+</test>
+<status endtime="20171202 19:48:47.218" status="PASS" starttime="20171202 19:48:41.571"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat id="s1" fail="0" name="Test" pass="1">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
